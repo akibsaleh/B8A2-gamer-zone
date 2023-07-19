@@ -615,6 +615,14 @@ footer p {
     margin-bottom: 62px;
   }
 
+  section#banner {
+    background-position: bottom center;
+  }
+
+  #features .flex_reverse .text_elements {
+    align-items: center;
+  }
+
   header > .container {
     flex-direction: column;
   }
@@ -710,6 +718,7 @@ footer p {
     width: auto;
     max-width: 100%;
     padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .hero_content.right_txt {
@@ -864,6 +873,8 @@ footer p {
 
   section#features .container {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .game_catalogue {
@@ -880,6 +891,14 @@ footer p {
 
   .banner_content {
     order: 2;
+  }
+
+  section#banner {
+    background-position: bottom center;
+  }
+
+  #features .flex_reverse .text_elements {
+    align-items: center;
   }
 
   div#banner_img {
