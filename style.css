@@ -1,6 +1,7 @@
 /* CSS Reset */
 *{
     margin:0;
+    padding: 0;
 }
 
 *, *::before, *::after {
@@ -12,6 +13,7 @@
 /* Global style  */
 
 :root{
+    --white: #ffffff;
     --primary_color: #FF42A5;
     --accent_color: #4EC5F7;
     --menu_color: #3C354F;
@@ -33,10 +35,6 @@ body{
     "footer";
 }
 
-header{
-    grid-area: header;
-}
-
 main{
     grid-area: main;
 }
@@ -44,4 +42,84 @@ main{
 footer{
     grid-area: footer;
 }
+
+header, main, footer {
+    display: flex;
+    justify-content: center;
+}
+
+section{
+    max-width: 1090px;
+    width: 100%;
+    display: flex;
+}
+
+.verticle-middle {
+    align-items: center;
+}
+
+.list_none {
+    list-style: none;
+}
+
 /* Global style  */
+
+/* header styles */
+
+header{
+    grid-area: header;
+    background-color: var(--white);
+    padding: 38px 0;
+    box-shadow: 0px 4px 30px #0000000f;
+}
+
+header > section {
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 45px;
+}
+
+h1 span{
+    color: var(--primary_color);
+}
+header nav {
+    display: flex;
+    column-gap: 32px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    font-weight: 500;
+    color: var(--menu_color);
+    text-decoration: none;
+}
+
+header nav .social {
+    display: flex;
+    column-gap: 24px;
+    background-color: #0b02230f;
+    padding: 16px 24px;
+    border-radius: 8px;
+}
+
+.social p {
+    font-weight: 500;
+    color: var(--menu_color);
+}
+
+nav .social ul{
+    display: flex;
+    column-gap: 16px;
+}
+
+/* header styles */
