@@ -1,0 +1,47 @@
+/* CSS Reset */
+*{
+    margin:0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* CSS Reset */
+
+/* Global style  */
+
+:root{
+    --primary_color: #FF42A5;
+    --accent_color: #4EC5F7;
+    --menu_color: #3C354F;
+    --banner_header: ##0B0223;
+    --general_text: #534C64;
+}
+
+html{
+    font-size: 18px;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.6;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
+/* Global style  */
