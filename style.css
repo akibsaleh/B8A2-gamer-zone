@@ -897,6 +897,10 @@ footer p {
     background-position: bottom center;
   }
 
+  #careers li {
+    font-size: 0.7rem;
+  }
+
   #features .flex_reverse .text_elements {
     align-items: center;
   }
