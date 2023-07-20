@@ -174,7 +174,7 @@ header nav .social {
 .social p {
   font-weight: 500;
   color: var(--menu_color);
-  line-height: 1;
+  line-height: 24px;
   padding: 0px;
   margin: 0px;
 }
@@ -277,10 +277,12 @@ nav .social ul {
   row-gap: 24px;
   padding: 95px 0px;
   width: 55%;
+  min-width: 400px;
 }
 
 .hero_content p {
   margin-bottom: 12px;
+  max-width: 520px;
 }
 
 .hero_content h4 {
@@ -293,6 +295,10 @@ nav .social ul {
   font-size: 1.33rem;
   line-height: 1.78rem;
   font-weight: 700;
+}
+
+#hero img.responsive_img {
+    max-width: 868px;
 }
 
 /* Hero style  */
@@ -505,6 +511,14 @@ img.responsive_img {
   margin-bottom: 8px;
 }
 
+#careers li .left {
+  text-align: left;
+}
+
+#careers li .right {
+  text-align: right;
+}
+
 #careers ul {
   padding-bottom: 40px;
 }
@@ -591,7 +605,7 @@ footer nav.pages a:hover {
   color: var(--primary_color);
 }
 
-.logo {
+footer .logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -626,6 +640,70 @@ footer p {
 /* Responsive Queries for Tablet*/
 
 @media screen and (max-width: 981px) {
+  html {
+    font-size: 16px;
+  }
+
+  header > .container, #banner > .container, #hero > .container, #catalogue > .container, #features .container, #features .container.flex_reverse, #careers > .container, #game_tags > .container, footer > .container, header nav {
+    padding: 0 20px;
+  }
+
+  .banner_content {
+    max-width: 420px;
+  }
+
+  section#hero img {
+      width: 60%;
+  }
+
+  .hero_content p {
+      max-width: 400px;
+  }
+
+  .game_catalogue {
+      grid-template-columns: 320px 320px;
+      row-gap: 40px;
+  }
+
+  .single_game {
+      text-align: center;
+  }
+
+  .display_img {
+      margin-bottom: 1rem;
+  }
+
+  #features .img_elements {
+      width: 500px;
+  }
+
+  .img_elements .small {
+      width: 220px;
+      transform: translate(-35%, 25%);
+  }
+
+  .flex_reverse .img_elements img.small {
+      width: 220px;
+      transform: translate(35%, 25%);
+  }
+
+  #features .container {
+      column-gap: 100px;
+  }
+
+  section#careers {
+      padding: 120px 30px;
+      background-size: 480px auto;
+      background-position: center right;
+  }
+
+  #careers .text_content {
+      max-width: 500px;
+  }
+
+  #game_tags .games {
+      justify-content: flex-start;
+  }
   
 }
 
@@ -676,8 +754,9 @@ footer p {
   }
   
   #careers {
-    padding-bottom: 640px;
-    background-position: bottom;
+    padding-bottom: 680px !important;
+    background-position: bottom !important;
+    background-size: contain !important;
   }
   
   #features .container, #features .flex_reverse .text_elements {
@@ -738,6 +817,9 @@ footer p {
       align-items: center;
       padding: 30px 0 60px;
   }
+  section#hero img {
+    width: 100%
+  }
 
   .hero_content p br {
       display: none;
@@ -771,7 +853,8 @@ footer p {
 
   #banner {
       background-position: bottom left;
-      background-size: 110%;
+      background-size: 100%;
+      padding-bottom: 118px;
   }
 
   .banner_content ul li {
@@ -801,6 +884,7 @@ footer p {
 
   header .logo {
       margin-bottom: 20px;
+      justify-content: center;
   }
 
   header {
@@ -820,10 +904,15 @@ footer p {
 
   .game_catalogue {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   #features .img_elements {
-      width: 300px;
+      width: 340px;
+  }
+
+  section#careers {
+    padding-bottom: 420px !important;
   }
 
   .img_elements .small {
@@ -842,6 +931,7 @@ footer p {
   }
 
   #game_tags .container {
+      grid-template-columns: repeat(3, 33%);
       column-gap: 6px;
       row-gap: 12px;
   }
@@ -908,5 +998,19 @@ footer p {
   .banner_content h2.punch {
     padding-bottom: 18px;
   }
+  .flex_reverse .img_elements img.small{
+    width: 150px;
+  }
+
+  #careers .container {
+    padding: 0 !important;
+  }
+
+  #banner {
+      background-position: bottom left !important;
+      background-size: 110% !important;
+      padding-bottom: 30px !important;
+  }
+
 
 }
